@@ -179,7 +179,7 @@ After conversion, users can find their Qlib format data in the directory `~/.qli
         The Restoration factor. Normally, ``factor = adjusted_price / original_price``, `adjusted price` reference: `split adjusted <https://www.investopedia.com/terms/s/splitadjusted.asp>`_
 
     In the convention of `Qlib` data processing, `open, close, high, low, volume, money and factor` will be set to NaN if the stock is suspended. 
-
+    If you want to use your own feature in the model, for example, PE, EPS and so on, you could add it in the CSV files of stocks. Notes that The arguments of `--include_fields` should change to correspond with the column names of CSV files.
 Stock Pool (Market)
 --------------------------------
 
