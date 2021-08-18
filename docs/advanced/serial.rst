@@ -26,12 +26,13 @@ Specifically, ``qlib.data.dataset.DatasetH`` is one of them. Users can serialize
 .. code-block:: Python
 
     ##=============dump dataset=============
+    dataset.config(dump_all=True, recursive=True) # if you want to save the preprocessed data to the local, add this line in your code
     dataset.to_pickle(path="dataset.pkl") # dataset is an instance of qlib.data.dataset.DatasetH
 
     ##=============reload dataset=============
     with open("dataset.pkl", "rb") as file_dataset:
         dataset = pickle.load(file_dataset)
-
+        
 .. note::
     Only state of ``DatasetH`` should be saved on the disk, such as some `mean` and `variance` used for data normalization, etc. 
 
